@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "name": "Standard Delivery with Pending Payment",
+    "input": "કાલે મનોજભાઈને 25 box મોકલવાના છે, ₹12,500 payment pending છે.",
+    "expected": {
+      "customer": "મનોજભાઈ",
+      "action": "delivery",
+      "quantity": "25 box",
+      "due_date": "tomorrow",
+      "amount": "₹12,500",
+      "payment_status": "pending"
+    }
+  },
+  {
+    "id": 2,
+    "name": "High Value Payment Reminder",
+    "input": "કિરણભાઈ સાથે ગુરુવારે પેમેન્ટ બાબતે મીટીંગ રાખજો, ₹50,000 લેવાના બાકી છે.",
+    "expected": {
+      "customer": "કિરણભાઈ",
+      "action": "payment reminder",
+      "quantity": null,
+      "due_date": "Thursday",
+      "amount": "₹50,000",
+      "payment_status": "pending"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Simple Order Without Amount",
+    "input": "આજે સાંજે સુરેશભાઈને ત્યાંથી 10 લીટર દૂધ લેવાનું છે.",
+    "expected": {
+      "customer": "સુરેશભાઈ",
+      "action": "order",
+      "quantity": "10 લીટર",
+      "due_date": "today evening",
+      "amount": null,
+      "payment_status": null
+    }
+  },
+  {
+    "id": 4,
+    "name": "Gujlish (Mixed Gujarati-English) Instruction",
+    "input": "Rakeshbhai ne call karine kejo ke next Monday delivery schedule kare, 100 units ready che.",
+    "expected": {
+      "customer": "Rakeshbhai",
+      "action": "delivery",
+      "quantity": "100 units",
+      "due_date": "next Monday",
+      "amount": null,
+      "payment_status": null
+    }
+  },
+  {
+    "id": 5,
+    "name": "Meeting Follow-up (No Quantity/Amount)",
+    "input": "નરેશભાઈ સાથે શનિવારે બપોરે નવી પ્રોડક્ટ ડિઝાઇન ડિસ્કસ કરવાની છે.",
+    "expected": {
+      "customer": "નરેશભાઈ",
+      "action": "follow-up",
+      "quantity": null,
+      "due_date": "Saturday afternoon",
+      "amount": null,
+      "payment_status": null
+    }
+  },
+  {
+    "id": 6,
+    "name": "Minimal Input (Only Customer and Action)",
+    "input": "દિનેશભાઈને ફોન કરો.",
+    "expected": {
+      "customer": "દિનેશભાઈ",
+      "action": "follow-up",
+      "quantity": null,
+      "due_date": null,
+      "amount": null,
+      "payment_status": null
+    }
+  }
+]
